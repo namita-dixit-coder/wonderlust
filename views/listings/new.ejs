@@ -1,0 +1,88 @@
+<%- layout("layout/boilerplate.ejs") %>
+
+
+    <div class="row g-3">
+        <div class="col-md-8 offset-2">
+            <h3>Create a new Listing</h3>
+            <form action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input name="listing[title]" id="title" placeholder="Enter title" type="text" class="form-control"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Enter a valid title
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="listing[description]" id="description" placeholder="Enter description"
+                        class="form-control"></textarea required>
+                        
+                        <div class="invalid-feedback">
+                            Enter a short description
+                        </div>
+
+            </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Listing Image</label>
+                    <input name="listing[image]" id="image" placeholder="Enter image URL/Link" type="file" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Enter a valid url
+                    </div>
+
+                </div>
+
+               
+                    <div class="col-md-4 mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input name="listing[price]" id="price" placeholder="1200" class="form-control">
+                        <div class="invalid-feedback">
+                            Enter a valid price
+                        </div>
+                        </div>
+                    <!-- <div class="col-md-4 mb-3">
+                    <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Category
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Farm</a></li>
+        <li><a class="dropdown-item" href="#">Arctic</a></li>
+        <li><a class="dropdown-item" href="#">Camping</a></li>
+        <li><a class="dropdown-item" href="#">Mountains</a></li>
+        <li><a class="dropdown-item" href="#">Deserts</a></li>
+        <li><a class="dropdown-item" href="#">Forests</a></li>
+        <li><a class="dropdown-item" href="#">Pools</a></li>
+        <li><a class="dropdown-item" href="#">Castles</a></li>
+        <li><a class="dropdown-item" href="#">Iconic Cities</a></li>
+        <li><a class="dropdown-item" href="#">Rooms</a></li>
+    </ul>
+</div>
+                        </div> -->
+                  
+                    <div class="col-md-4 mb-3">
+                        <label for="country" class="form-label">Country</label>
+                        <input name="listing[country]" id="country" placeholder="India" type="text" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Enter a valid country name
+                    </div>
+                    </div>
+              
+
+       
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input name="listing[location]" id="location" placeholder="Jaipur, Rajasthan" type="text" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Enter a valid location
+                    </div>
+                </div>
+                <button class="btn btn-dark add-btn">ADD</button>
+            </form>
+        </div>
+        </div>
+   
